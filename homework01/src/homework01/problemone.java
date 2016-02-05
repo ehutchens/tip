@@ -1,5 +1,7 @@
+
 package homework01;
 
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class problemone {
@@ -11,26 +13,66 @@ public class problemone {
 		String [] zoos = new String [] {"San Diego Zoo", "Woodland Park Zoo", "Houston Zoo"};
 		int animalnumber [] [] = {{3700, 1098, 6000}, {650, 300, 900}};
 
-		// Object[] possibilities = {"San Diego Zoo", "Woodland Zoo", "Houston Zoo"};
-		// String s = (String)JOptionPane.showInputDialog(frame, "Choose a zoo: ", JOptionPane.PLAIN_MESSAGE, icon, possinilities);
-		// String answer = JOptionPane.showInputDialog("Choose One: ");
+
+		//Used form Oracle on "How to Make Dialogs"
+		Object[] choices = {"San Diego Zoo", "Woodland Park Zoo", "Houston Zoo"};
+		String zoochoice = (String)JOptionPane.showInputDialog(null, "Choose one of these zoos:", "Zoos", JOptionPane.PLAIN_MESSAGE, null, choices, "San Diego Zoo");
 		
-		System.out.println("Zoos" + zoos);
-        	for(int i=0; i < zoos.length; i++){
-        		System.out.println(zoos[i]);
-        	 }
+				// printing the zoo choices from the JOptionPane
+				if (zoochoice == choices[0]) {
+					System.out.println(choices[0]);
+					System.out.println("Number of Animals: ");
+					System.out.println(animalnumber[0][0]);
+					System.out.println("Number of Species: ");
+					System.out.println(animalnumber[1][0]);
+					
+				}
+				
+				else if (zoochoice == choices[1]) {
+					System.out.println(choices[1]);
+					System.out.println("Number of Animals: ");
+					System.out.println(animalnumber[0][1]);
+					System.out.println("Number of Species: ");
+					System.out.println(animalnumber[1][1]);
+				}
+				
+				else if (zoochoice == choices[2]) {
+					System.out.println(choices[2]);
+					System.out.println("Number of Animals: ");
+					System.out.println(animalnumber[0][2]);
+					System.out.println("Number of Species: ");
+					System.out.println(animalnumber[1][2]);
+				}
+		//	}
 
-		System.out.println("Number of Animals & Species");
-		displayArrays(animalnumber);
-	}
+	//problemone();
+	
+	//public problemone(){
 
-	public static void displayArrays(int x[] []) {
-		for(int row = 0; row < x.length; row++) {
-			for(int column = 0; column < x[row].length; column++) {
-				System.out.print(x[row] [column] + "\t");
+			do {
+				Scanner answer = new Scanner(System.in);
+				System.out.println("Would you like to find the sum of all the animals in the three zoos? yes/no");
+				String yesNo = answer.toString();
+				
+				if (yesNo.equalsIgnoreCase("yes")) {
+				//	average();
+				//	System.out.println(sum);
+				}
+				
+				else if(yesNo.equalsIgnoreCase("no") ) {
+					System.out.println("Your Loss");
+					break;
+				}
+				
+				else {
+					System.out.println("This is not a valid input");
+					break;
+				}
 			}
-			
-			System.out.println();
+			while(true);
 		}
-	}
+
+
+	
 }
+			
