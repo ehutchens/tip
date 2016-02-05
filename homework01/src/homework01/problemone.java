@@ -1,4 +1,6 @@
-
+/* Emily Hutchens
+ * Fall 2016
+ */
 package homework01;
 
 import java.util.Scanner;
@@ -8,8 +10,7 @@ public class problemone {
 	
 	public static void main(String[] args) {
 		
-		//The structure of the multidimensional array was inspired by 
-		//thenewboston on youtube "Java Programming Tutorial - 34- Table for Multi Arrays"
+		//The structure was inspired by thenewboston on youtube "Java Programming Tutorial - 34- Table for Multi Arrays"
 		String [] zoos = new String [] {"San Diego Zoo", "Woodland Park Zoo", "Houston Zoo"};
 		int animalnumber [] [] = {{3700, 1098, 6000}, {650, 300, 900}};
 
@@ -43,23 +44,27 @@ public class problemone {
 					System.out.println("Number of Species: ");
 					System.out.println(animalnumber[1][2]);
 				}
-		//	}
-
-	//problemone();
 	
-	//public problemone(){
+						try {
+							Thread.sleep(2000);
+							}
+						catch(InterruptedException ex){
+							Thread.currentThread().interrupt();
+							}
 
-			do {
-				Scanner answer = new Scanner(System.in);
+
+			do { //Scanner input 
+				Scanner myScan = new Scanner(System.in);
 				System.out.println("Would you like to find the sum of all the animals in the three zoos? yes/no");
-				String yesNo = answer.toString();
+				String firstAnswer = null;
+				firstAnswer = myScan.nextLine();
 				
-				if (yesNo.equalsIgnoreCase("yes")) {
-				//	average();
-				//	System.out.println(sum);
+				
+				if (firstAnswer.equalsIgnoreCase("yes")) {
+					sum();
 				}
 				
-				else if(yesNo.equalsIgnoreCase("no") ) {
+				else if(firstAnswer.equalsIgnoreCase("no") ) {
 					System.out.println("Your Loss");
 					break;
 				}
@@ -70,9 +75,31 @@ public class problemone {
 				}
 			}
 			while(true);
-		}
-
-
-	
+			
+			do {
+				Scanner myScan = new Scanner(System.in);
+				System.out.println("Would you like to find the average of all the animals in the three zoos? yes/no");
+				String secondAnswer = null;
+				secondAnswer = myScan.nextLine();
+				
+				
+				if (secondAnswer.equalsIgnoreCase("yes")) {
+					average();
+				}
+				
+				else if(secondAnswer.equalsIgnoreCase("no") ) {
+					System.out.println("Your Loss");
+					break;
+				}
+				
+				else {
+					System.out.println("This is not a valid input");
+					break;
+				}
+			}
+			while(true);
+	}
 }
+
+
 			
