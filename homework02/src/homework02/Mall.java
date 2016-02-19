@@ -3,26 +3,36 @@ package homework02;
 public class Mall extends MallCentral {
 
 	private static final String allMalls = "Malls in America";
-	private String mallName2;
-	private String location2;
-	private int nos2;
-	private int rating2;
+	private String mallName;
+	private String location;
+	private int nos;
+	private int rating;
 	
 	public Mall() {
-		mallName2 = "SouthCenter";
-		location2 = "Tukwila, Washington";
-		nos2 = 120;
-		rating2 = 4;
+		mallName = "SouthCenter";
+		location = "Tukwila, Washington";
+		nos = 120;
+		rating = 4;
 	}
 	
 	@Override 
 	public String getmallName() {
-		return (mallName2);
+		return (mallName);
 	}
 	
 	@Override 
 	public String getlocation() {
-		return (location2);
+		return (location);
+	}
+	
+	@Override
+	public int getnos() {
+		return(nos);
+	}
+	
+	@Override
+	public int getrating() {
+		return(rating);
 	}
 	
 }

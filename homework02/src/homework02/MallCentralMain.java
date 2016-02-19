@@ -42,17 +42,17 @@ public class MallCentralMain {
 		
 			//MallPrint2 Object //mall recommendation
 			Mall mallPrint2 = new Mall(); 
-			String mallName2 = mallPrint2.getmallName();
-			String location2 = mallPrint2.getlocation();
-			int nos2 = mallPrint2.getnos();
-			int rating2 = mallPrint2.getrating();
+			String mallName = mallPrint2.getmallName();
+			String location = mallPrint2.getlocation();
+			int nos = mallPrint2.getnos();
+			int rating = mallPrint2.getrating();
 			
 			System.out.println("If you haven't been already, you should try this mall:");
 			System.out.println(a);
-			System.out.println("Named: " + mallName2);
-			System.out.println("Located in: " + location2);
-			System.out.println("Number of Stores: " + nos2);
-			System.out.println("Store Rating 0-5: "+ rating2);
+			System.out.println("Named: " + mallName);
+			System.out.println("Located in: " + location);
+			System.out.println("Number of Stores: " + nos);
+			System.out.println("Store Rating 0-5: "+ rating);
 	}
 
 }
