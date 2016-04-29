@@ -1,5 +1,7 @@
 package homework02;
 
+// Layout of superclass and both subclasses were inspired by Team2016 
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -77,7 +79,8 @@ public class MallCentral {
 	//set int methods with try catch statement and user input checking
 	public int setnos() {
 		
-		System.out.println("Enter the number of stores in " + mallName);
+		//The try catch was inspired by Java InputMismatch Exception on StackOverflow
+		System.out.println("Enter the number of stores in " + mallName); 
 		nos = mallScanner.nextInt();
 		
 			while(nos > 0 && nos < 200)	{
@@ -95,6 +98,7 @@ public class MallCentral {
 	
 	public int setrating() {
 		
+		//The try catch was inspired by Java InputMismatch Exception on StackOverflow
 		System.out.println("Mall rating from 0 to 5: ");
 		rating = mallScanner.nextInt();
 		
@@ -108,7 +112,7 @@ public class MallCentral {
 						mallScanner.nextLine();
 					}
 				}
-			return nos;
+			return rating;
 		}
   	}
 

@@ -1,5 +1,9 @@
 package homework02;
 
+/* Emily Hutchens
+ * Fall 2016
+ */
+
 public class MallCentralMain {
 
 	public static void main(String[] args) {

@@ -1,4 +1,5 @@
 package homework02;
+import homework02.MallCentral;
 
 public class Mall extends MallCentral {
 
